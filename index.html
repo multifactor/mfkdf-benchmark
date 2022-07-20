@@ -88,7 +88,7 @@
         end(rn, "setup factor question")
 
         start(rn, "setup factor totp")
-        const totpSetup = await mfkdf.stage.factor.setup(mfkdf.setup.factors.totp({ secret: Buffer.from('hello world'), time: 1650430806597, window: 2920 }), init.key)
+        const totpSetup = await mfkdf.stage.factor.setup(mfkdf.setup.factors.totp({ secret: Buffer.from('hello world'), time: 1650430806597 }), init.key)
         end(rn, "setup factor totp")
 
         start(rn, "setup factor uuid")
