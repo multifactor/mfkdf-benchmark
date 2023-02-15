@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from matplotlib.lines import Line2D
 from matplotlib.ticker import ScalarFormatter
 
-file = open('rnew.txt', 'r')
+file = open('results.txt', 'r')
 lines = file.readlines()
 
 factors = ["uuid", "hmacsha1", "question", "password", "hotp", "ooba", "totp"]
@@ -78,4 +78,4 @@ axes[0].set_zorder(100)
 ticks = ['', '', '10 µs', '100 µs', '1 ms', '10 ms']
 plt.gca().set_xticklabels(ticks, fontsize=12)
 # fig.suptitle('Setup & Derivation Time for MFKDF Factors')
-plt.savefig('factors_h_h.pdf', bbox_inches='tight')
+plt.savefig('factors_h.pdf', bbox_inches='tight')
